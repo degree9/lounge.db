@@ -1,4 +1,4 @@
-(ns lounge.database.users
+(ns lounge.db.users
   (:require [lounge.api :as api]
             [lounge.database :as db]
             [cemerick.friend.credentials :as creds]

@@ -1,4 +1,4 @@
-(ns lounge.database
+(ns lounge.db
   (:require [castra.core :refer [defrpc ex *session*]]
             [monger.core :as mg]
             [monger.collection :as mc]
