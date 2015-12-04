@@ -10,7 +10,7 @@
  '[adzerk.bootlaces :refer :all]
  '[hoplon.boot-hoplon :refer :all])
 
-(def +version+ "0.1.0")
+(def +version+ "0.1.1")
 
 (task-options!
  pom {:project 'degree9/lounge.db
