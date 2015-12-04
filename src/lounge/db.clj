@@ -4,9 +4,9 @@
             [monger.collection :as mc]
             [clj-uuid :as uuid]))
 
-(def dbconn (let [;uri (System/genenv "MONGO_URI")
+(def dbconn (let [uri (or (System/genenv "LOUNGE_DB") "mongodb://lounge_db:27017")
                   ]
-              (mg/connect-via-uri "mongodb://lounge_db:27017")))
+              (mg/connect-via-uri uri)))
 
 (defn find-map [coll doc]
   (mc/find-one-as-map (:db dbconn) coll doc))
