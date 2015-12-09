@@ -4,7 +4,7 @@
             [monger.collection :as mc]
             [clj-uuid :as uuid]))
 
-(def dbconn (let [uri (or (System/genenv "LOUNGE_DB") "mongodb://lounge_db:27017")
+(def dbconn (let [uri (or (System/getenv "LOUNGE_DB") "mongodb://lounge_db:27017")
                   ]
               (mg/connect-via-uri uri)))
 
